@@ -1,0 +1,62 @@
+# This was my first iteration of the problem, generating a stack
+# in reverse order and then pop. Problem here, is space complexity
+# Time complexity O(n)
+# Space complexity O(n)
+def isValidSubsequence(array, sequence):
+    seq_stack = []
+    for i in range(len(sequence)-1, -1, -1):
+        seq_stack.append(sequence[i])
+    
+    for n in array:
+        if seq_stack and n == seq_stack[-1]:
+            seq_stack.pop()
+
+    return len(seq_stack) == 0
+
+# This is another variation of using stack, but traversing the original array
+# in reverse order, so there's no need for a second stack, but it will modify
+# the original sequence array.
+# Time complexity O(n)
+# Space complexity O(1)
+def isValidSubsequence2(array, sequence):
+    for i in range(len(array)-1, -1, -1):
+        if not sequence:
+            return True
+        if array[i] == sequence[-1]:
+            sequence.pop()
+
+    return len(sequence) == 0
+
+# This is a last solution after watching the solution video from AlgoExpert
+# Time complexity O(n)
+# Space complexity O(1)
+def isValidSubsequence_AlgoExpert(array, sequence):
+    arrIdx = 0
+    seqIdx = 0
+    while arrIdx < len(array) and seqIdx < len(sequence):
+        if array[arrIdx] == sequence[seqIdx]:
+            seqIdx += 1
+        arrIdx += 1
+    return seqIdx == len(sequence)
+
+# This was the second try, using a two pointer strategy.
+# slow pointer is used to traverse in order the sequence array
+# Time complexity: O(n)
+# Space complexity: O(1)
+def isValidSubsequence3(array, sequence):
+    slow = 0
+
+    for n in array:
+        if slow == len(sequence):
+            return True
+        if n == sequence[slow]:
+            slow += 1
+
+    return slow == len(sequence)
+
+array = [5, 1, 22, 25, 6, -1, 8, 10]
+sequence = [1, 6, -1, 10]
+
+result = isValidSubsequence_AlgoExpert(array, sequence)
+print("result:", result)
+print("expected:", True)
