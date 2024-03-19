@@ -22,6 +22,10 @@
 
 # Output:
 # [null, null, -1]
+
+# In this implementation, i overcomplicated a little bit
+# because i didn't want to use the dummy head technique
+# which later learned is pretty common.
 class LinkedList:
     
     def __init__(self):
