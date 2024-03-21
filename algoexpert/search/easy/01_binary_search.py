@@ -14,6 +14,30 @@
 # Sample Output
 # 3
 
+# recursively
+# O(log n) time | O(log n) space
+def binarySearch_recursively(array, target):
+    left, right = 0, len(array)-1
+    return helper(array, left, right, target)
+    
+def helper(array, left, right, target):
+    mid = (left+right)//2
+    if left > right:
+        return -1
+    
+    if target > array[mid]:
+        left = mid+1
+        return helper(array, left, right, target)
+
+    elif target < array[mid]:
+        right = mid-1
+        return helper(array, left, right, target)
+
+    else:
+        return mid
+
+# iteratively
+# O(log n) time | O(1) space
 def binarySearch(array, target):
     low = 0
     high = len(array)-1
