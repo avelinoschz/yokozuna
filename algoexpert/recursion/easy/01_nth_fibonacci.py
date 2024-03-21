@@ -24,6 +24,8 @@
 
 # This is a recursive version, but using memoization(aka cache)
 # This is from AlgoExpert solution video
+
+# O(n^2) time | O(n) space - where n is the input number
 def getNthFib_AlgoRecursive(n, memo={1: 0, 2: 1}):
     if not n in memo:
         memo[n] = getNthFib(n-1) + getNthFib(n-2)
@@ -31,6 +33,8 @@ def getNthFib_AlgoRecursive(n, memo={1: 0, 2: 1}):
     return memo[n]
 
 # This is the iterative solution from AlgoExpert.
+
+# O(n) time | O(1) space - where n is the input number
 def getNthFib_AlgoIterative(n):
     lastTwo = [0, 1]
     counter = 3
@@ -47,7 +51,8 @@ def getNthFib_AlgoIterative(n):
 # For example if n is 1, needs to return zero because is the first 
 # number of the sequence. If input is 2, then result needs to be 1
 # and so on.
-# Time complexity: O(N)
+
+# Time complexity: O(n)
 # Space complexity: O(1)
 def getNthFib(n):
     if n == 1:
