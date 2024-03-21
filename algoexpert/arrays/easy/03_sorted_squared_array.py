@@ -1,3 +1,5 @@
+# https://www.algoexpert.io/questions/sorted-squared-array
+
 # Write a function that takes in a non-empty array of integers that are 
 # sorted in ascending order and returns a new array of the same length 
 # with the squares of the original integers also sorted in ascending order.
@@ -9,6 +11,8 @@
 # [1, 4, 9, 25, 36, 64, 81]
 
 # These are the solutions from AlogExpert
+
+# This first one relies on calculate the squares and then sort the result array.
 # O(n log n) time | O(n) space
 def sortedSquaredArray_AlgoSort(array):
     sortedSquares = [0 for _ in array]
@@ -19,6 +23,11 @@ def sortedSquaredArray_AlgoSort(array):
 
     sortedSquares.sort()
     return sortedSquares
+
+# This second solution uses a two pointer (or three) technique. 
+# First create an array full of zeroes, and while traversing 
+# at the start and end of the array, add to the end of the
+# output array the one that's bigger.
 
 # O(n) time | O(n) space
 def sortedSquaredArray(array):
@@ -40,7 +49,7 @@ def sortedSquaredArray(array):
     return sortedSquares 
 
 # -----------------------------------------------
-# my solution for the problem
+# My solution for the problem.
 def sortedSquaredArray(array):
     start = 0
     end = len(array)-1

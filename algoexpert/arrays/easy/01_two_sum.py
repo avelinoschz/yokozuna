@@ -1,3 +1,4 @@
+# https://www.algoexpert.io/questions/two-number-sum
 
 # Write a function that takes in a non-empty array of distinct integers and an 
 # integer representing a target sum. If any two numbers in the input array sum 
@@ -18,9 +19,9 @@
 # Sample Output
 # [-1, 11] // the numbers could be in reverse order
 
+# This was my first try, using map (dictionary in python)
 # Time complexity: O(n)
 # Space complexity: O(n)
-# This was my first try, using map (dictionary in python)
 def twoNumberSum(array, targetSum):
     nums_seen = {}
     for n in array:
@@ -31,11 +32,10 @@ def twoNumberSum(array, targetSum):
 
     return []
 
-
-# Time complexity: O(n)
-# Space complexity: O(n)
 # Since I didn't need key-value pair, this is a second try
 # using only a set. Same functionality and space.
+# Time complexity: O(n)
+# Space complexity: O(n)
 def twoNumberSum2(array, targetSum):
     nums_seen = set()
     for n in array:
