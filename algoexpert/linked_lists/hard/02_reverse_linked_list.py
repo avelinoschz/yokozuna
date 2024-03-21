@@ -16,6 +16,7 @@
 # Sample Output
 # 5 → 4 → 3 → 2 → 1 → 0 // the new head node with value 5
 
+# Optimal:
 # O(n) time | O(1) space - where `n` is the number of nodes in the Linked List
 
 # This is an input class. Do not edit.
@@ -24,7 +25,8 @@ class LinkedList:
         self.value = value
         self.next = None
 
-
+# Time complexity: O(n)
+# Space complexity: O(1)
 def reverseLinkedList(head):
     prev = None
     curr = head
