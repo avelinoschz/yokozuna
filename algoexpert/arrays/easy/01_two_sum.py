@@ -22,7 +22,7 @@
 # This was my first try, using map (dictionary in python)
 # Time complexity: O(n)
 # Space complexity: O(n)
-def twoNumberSum(array, targetSum):
+def twoNumberSum1(array, targetSum):
     nums_seen = {}
     for n in array:
         com = targetSum - n
