@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/design-linked-list/description/
+
 # Design your implementation of the linked list. You can choose to use a singly 
 # or doubly linked list.
 # A node in a singly linked list should have two attributes: val and next. val is 
@@ -38,7 +40,8 @@
 # myLinkedList.get(1);              // return 3
 
 # Since I already did a singly linked list implementation in the neetcode platform
-# I decided to implement a double linked list for this leetcode problem.
+# I decided to implement a double linked list for this leetcode problem, since
+# I already did an implementation of a sinlgy linked list in the neetcode course.
 class ListNode:
     def __init__(self, val=0):
         self.val=val

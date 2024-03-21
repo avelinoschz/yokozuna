@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/merge-two-sorted-lists/
+
 # You are given the heads of two sorted linked lists list1 and list2.
 
 # Merge the two lists into one sorted list. The list should be made by 
@@ -54,7 +56,6 @@ def mergeTwoListsRecursive(list1: Optional[ListNode], list2: Optional[ListNode])
     
 # Needed some help, looking for a bit solutions and then I write it on my own.
 def mergeTwoLists(list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
-    print("merge two lists")
     dummy = temp = ListNode()
 
     while list1 and list2:

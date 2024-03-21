@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/two-sum/description/
+
 # Given an array of integers nums and an integer target, return indices of 
 # the two numbers such that they add up to target.
 
@@ -18,6 +20,9 @@
 # Example 3:
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
+
+# Time complexity: O(n)
+# Space complexity: O(n)
 from typing import List
 
 def twoSum(nums: List[int], target: int) -> List[int]:
