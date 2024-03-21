@@ -16,9 +16,8 @@
 # Sample Output
 # true
 
-# This is a last solution after watching the solution video from AlgoExpert
-# Time complexity O(n)
-# Space complexity O(1)
+# This was the last solution after watching the solution video from AlgoExpert
+# O(n) time | O(1) space - where `n` is the length of the input array
 def isValidSubsequence_AlgoExpert(array, sequence):
     arrIdx = 0
     seqIdx = 0

@@ -13,7 +13,7 @@
 # These are the solutions from AlogExpert
 
 # This first one relies on calculate the squares and then sort the result array.
-# O(n log n) time | O(n) space
+# O(n log n) time | O(n) space - where `n` is the length of the input array
 def sortedSquaredArray_AlgoSort(array):
     sortedSquares = [0 for _ in array]
 
@@ -29,7 +29,7 @@ def sortedSquaredArray_AlgoSort(array):
 # at the start and end of the array, add to the end of the
 # output array the one that's bigger.
 
-# O(n) time | O(n) space
+# O(n) time | O(n) space - where `n` is the length of the input array
 def sortedSquaredArray(array):
     sortedSquares = [0 for _ in array]
     smallerValueIdx = 0
@@ -50,6 +50,8 @@ def sortedSquaredArray(array):
 
 # -----------------------------------------------
 # My solution for the problem.
+# Time complexity: O(n)
+# Space complexity: O(n)
 def sortedSquaredArray(array):
     start = 0
     end = len(array)-1
