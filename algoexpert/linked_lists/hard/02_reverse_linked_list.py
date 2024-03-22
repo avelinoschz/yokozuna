@@ -36,3 +36,17 @@ def reverseLinkedList(head):
         prev = curr
         curr = temp_next
     return prev
+
+# Time complexity: O(n)
+# Space complexity: (n)
+def reverseLinkedList_recursively(head):
+    if not head.next:
+        return head
+
+    new_head = reverseLinkedList(head.next)
+    
+    head.next.next = head
+    head.next = None
+    
+    return new_head
+    
