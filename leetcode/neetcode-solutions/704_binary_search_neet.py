@@ -1,3 +1,9 @@
+# neetcode video solution
+# https://www.youtube.com/watch?v=s4DPM8ct1pI
+
+# Time complexity: O(log n)
+# Space complexity: O(1)
+
 from typing import List
 
 def search(nums: List[int], target: int) -> int:
