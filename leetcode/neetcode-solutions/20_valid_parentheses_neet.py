@@ -1,3 +1,5 @@
+# 20. Valid Parentheses
+
 # neetcode video solution
 # https://www.youtube.com/watch?v=WTzjTskDFMg
 

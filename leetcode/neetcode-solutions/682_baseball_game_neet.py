@@ -1,3 +1,5 @@
+# 682. Baseball Number
+
 # neetcode video solution
 # https://www.youtube.com/watch?v=Id_tqGdsZQI
 

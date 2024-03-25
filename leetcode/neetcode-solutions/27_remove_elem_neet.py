@@ -1,3 +1,5 @@
+# 27. Remove Element
+
 # neetcode video solution
 # https://www.youtube.com/watch?v=Pcd1ii9P9ZI
 

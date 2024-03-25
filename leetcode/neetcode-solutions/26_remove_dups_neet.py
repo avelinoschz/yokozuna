@@ -1,3 +1,5 @@
+# 26. Remove Duplicates from Sorted Array
+
 # neetcode video solution
 # https://www.youtube.com/watch?v=DEJAZBq0FDA
 
