@@ -1,3 +1,5 @@
+# 682. Baseball Number
+
 # https://leetcode.com/problems/baseball-game/
 
 # You are keeping the scores for a baseball game with strange rules. 

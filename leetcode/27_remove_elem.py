@@ -1,3 +1,5 @@
+# 27. Remove Element
+
 # https://leetcode.com/problems/remove-element/description/
 
 # Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. 
