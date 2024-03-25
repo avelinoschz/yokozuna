@@ -1,6 +1,16 @@
+# You're given a Linked List with at least one node. Write a function that 
+# returns the middle node of the Linked List. If there are two middle nodes 
+# (i.e. an even length list), your function should return the second of these nodes.
 
+# Each `LinkedList` node has an integer `value` as well as a `next` node pointing 
+# to the next node in the list or to `None` / `null` if it's the tail of the list.
 
+# Sample Input
+# linkedList = 2 -> 7→> 3 -→5
 
+# Sample Output
+# // The middle could be 7 or 3,
+# 3 > 5 // we return the second middle node
 
 # This is an input class. Do not edit.
 class LinkedList:
@@ -8,7 +18,7 @@ class LinkedList:
         self.value = value
         self.next = None
 
-# O(n + m) therefore O(n) time | O(1) space
+# O(n + m) therefore: O(n) time | O(1) space
 # `n` being the length of the linkedlist
 # `m` being the half length of the linkedList
 def middleNode_Algo1(linkedList):
@@ -24,7 +34,7 @@ def middleNode_Algo1(linkedList):
     
     return middleNode
 
-# O(n/2) therefore O(n) time | O(1) space
+# O(n/2) therefore: O(n) time | O(1) space
 def middleNode_Algo2(linkedList):
     slowNode = linkedList
     fastNode = linkedList
@@ -38,6 +48,7 @@ def middleNode_Algo2(linkedList):
 # -----------------------------------------------
 
 # This was my first solution, implementing two iterations
+# O(n + m) therefore: O(n) time | O(1) space
 def middleNode(linkedList):
     length = 0
     cur = linkedList
@@ -56,6 +67,7 @@ def middleNode(linkedList):
 
 # After reading the hints, implemented a two pointer technique
 # In my case I did it in a slightly different way.
+# O(n + m) therefore: O(n) time | O(1) space
 def middleNode(linkedList):
     fast = linkedList
     slow = linkedList
