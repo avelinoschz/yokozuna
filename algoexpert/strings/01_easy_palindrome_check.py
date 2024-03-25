@@ -1,3 +1,5 @@
+# Palindrome Check
+
 # https://www.algoexpert.io/questions/palindrome-check
 
 # Write a function that takes in a non-empty string and that returns 

@@ -1,3 +1,5 @@
+# Binary Search
+
 # https://www.algoexpert.io/questions/binary-search
 
 # Write a function that takes in a sorted array of integers as well as a target integer. 

@@ -1,3 +1,5 @@
+# Sorted Squared Array
+
 # https://www.algoexpert.io/questions/sorted-squared-array
 
 # Write a function that takes in a non-empty array of integers that are 
