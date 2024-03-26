@@ -28,20 +28,38 @@
 # 3// 3 is the first integer that appears more than once.
 # // 2 also appears more than once, but the second 2 appears after the second 3.
 
+# Brute-force solution
+# O(n^2) time | O(1) space
+def firstDuplicateValue_Algo(array):
+    min_index = len(array)
+    
+    for i in range(len(array)):
+        for j in range(i+1, len(array)):
+            if array[i] == array[j] and j < min_index:
+                min_index = j
+    
+    if min_index == len(array):
+        return -1
+    
+    return array[min_index]
+
+# The other two solutions presented by AlgoExpert, were almost same as my proposed code.
+
 # -----------------------------------------------
 
 # First, I though this was only a re-write of the leetcode problem 217. Contains Duplicate
 # After reading the description, understand it wasn't. Could be solved in the same way
 # But it has different constraints, that make it possible to solve in other way.
 
+# using a set
 # O(n) time | O(n) space
-def firstDuplicateValue(array):
-    hashset = set()
+def firstDuplicateValue1(array):
+    seen = set()
 
     for n in array:
-        if n in hashset:
+        if n in seen:
             return n
-        hashset.add(n)
+        seen.add(n)
     
     return -1
 
@@ -50,6 +68,10 @@ def firstDuplicateValue(array):
 # being n the length of the array. Meaning that all the array integers, could
 # be used as indexes. Another hint was around that we could modify the array.
 # With these two hints, we could achieve this second implementation.
+
+# taking advantage of the constraints:
+# 1. values inside the array are from 1...n; n been the length of the array
+# 2. it is possible to modify the input array
 
 # O(n) time | O(1) space
 def firstDuplicateValue2(array):
