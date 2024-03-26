@@ -21,6 +21,10 @@
 # Sample Output
 # [-1, 11] // the numbers could be in reverse order
 
+# There are none AlgoExpert solutions, since those were basically same as mine.
+
+# -----------------------------------------------
+
 # This was my first try, using map (dictionary in python)
 # Time complexity: O(n)
 # Space complexity: O(n)

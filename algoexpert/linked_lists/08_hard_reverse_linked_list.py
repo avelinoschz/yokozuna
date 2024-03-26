@@ -32,9 +32,10 @@ class LinkedList:
         self.value = value
         self.next = None
 
+# iterative
 # Time complexity: O(n)
 # Space complexity: O(1)
-def reverseLinkedList(head):
+def reverseLinkedList1(head):
     prev = None
     curr = head
     while curr:
@@ -44,13 +45,14 @@ def reverseLinkedList(head):
         curr = temp_next
     return prev
 
+# recursive
 # Time complexity: O(n)
 # Space complexity: (n)
-def reverseLinkedList_recursively(head):
+def reverseLinkedList2(head):
     if not head.next:
         return head
 
-    new_head = reverseLinkedList(head.next)
+    new_head = reverseLinkedList2(head.next)
     
     head.next.next = head
     head.next = None

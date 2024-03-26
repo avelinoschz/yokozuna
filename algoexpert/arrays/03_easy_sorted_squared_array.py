@@ -16,7 +16,7 @@
 
 # This first one relies on calculate the squares and then sort the result array.
 # O(n log n) time | O(n) space - where `n` is the length of the input array
-def sortedSquaredArray_AlgoSort(array):
+def sortedSquaredArray_Algo1(array):
     sortedSquares = [0 for _ in array]
 
     for idx in range(len(array)):
@@ -32,7 +32,7 @@ def sortedSquaredArray_AlgoSort(array):
 # output array the one that's bigger.
 
 # O(n) time | O(n) space - where `n` is the length of the input array
-def sortedSquaredArray(array):
+def sortedSquaredArray_Algo2(array):
     sortedSquares = [0 for _ in array]
     smallerValueIdx = 0
     largestValueIdx = len(array)-1

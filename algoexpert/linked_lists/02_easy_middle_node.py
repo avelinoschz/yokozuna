@@ -51,7 +51,7 @@ def middleNode_Algo2(linkedList):
 
 # This was my first solution, implementing two iterations
 # O(n + m) therefore: O(n) time | O(1) space
-def middleNode(linkedList):
+def middleNode1(linkedList):
     length = 0
     cur = linkedList
     while cur:
@@ -70,7 +70,7 @@ def middleNode(linkedList):
 # After reading the hints, implemented a two pointer technique
 # In my case I did it in a slightly different way.
 # O(n + m) therefore: O(n) time | O(1) space
-def middleNode(linkedList):
+def middleNode2(linkedList):
     fast = linkedList
     slow = linkedList
 

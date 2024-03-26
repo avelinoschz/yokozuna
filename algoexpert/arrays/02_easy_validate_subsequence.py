@@ -20,7 +20,7 @@
 
 # This was the last solution after watching the solution video from AlgoExpert
 # O(n) time | O(1) space - where `n` is the length of the input array
-def isValidSubsequence_AlgoExpert(array, sequence):
+def isValidSubsequence_Algo(array, sequence):
     arrIdx = 0
     seqIdx = 0
     while arrIdx < len(array) and seqIdx < len(sequence):
@@ -34,7 +34,7 @@ def isValidSubsequence_AlgoExpert(array, sequence):
 # in reverse order and then pop. Problem here, is space complexity
 # Time complexity O(n)
 # Space complexity O(n)
-def isValidSubsequence(array, sequence):
+def isValidSubsequence1(array, sequence):
     seq_stack = []
     for i in range(len(sequence)-1, -1, -1):
         seq_stack.append(sequence[i])
@@ -77,6 +77,6 @@ def isValidSubsequence3(array, sequence):
 array = [5, 1, 22, 25, 6, -1, 8, 10]
 sequence = [1, 6, -1, 10]
 
-result = isValidSubsequence_AlgoExpert(array, sequence)
+result = isValidSubsequence_Algo(array, sequence)
 print("result:", result)
 print("expected:", True)

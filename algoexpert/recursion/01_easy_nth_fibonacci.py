@@ -28,16 +28,16 @@
 # This is from AlgoExpert solution video
 
 # O(n^2) time | O(n) space - where n is the input number
-def getNthFib_AlgoRecursive(n, memo={1: 0, 2: 1}):
+def getNthFib_Algo1(n, memo={1: 0, 2: 1}):
     if not n in memo:
-        memo[n] = getNthFib(n-1) + getNthFib(n-2)
+        memo[n] = getNthFib_Algo1(n-1) + getNthFib_Algo1(n-2)
         
     return memo[n]
 
 # This is the iterative solution from AlgoExpert.
 
 # O(n) time | O(1) space - where n is the input number
-def getNthFib_AlgoIterative(n):
+def getNthFib_Algo2(n):
     lastTwo = [0, 1]
     counter = 3
     while counter <= n:
@@ -56,7 +56,7 @@ def getNthFib_AlgoIterative(n):
 
 # Time complexity: O(n)
 # Space complexity: O(1)
-def getNthFib(n):
+def getNthFib1(n):
     if n == 1:
         return 0
     elif n == 2:
@@ -81,9 +81,9 @@ def getNthFib2(n):
     elif n == 2:
         return 1
 
-    return getNthFib(n-1) + getNthFib(n-2)
+    return getNthFib2(n-1) + getNthFib2(n-2)
 
 target = 7
-result = getNthFib_AlgoIterative(target)
+result = getNthFib_Algo2(target)
 print("result:", result)
 # [0, 1, 1, 2, 3, 5, 8]
