@@ -1,4 +1,4 @@
-# This was my first try, before looking at the sol video
+# This was my first try, before looking at the sol video.
 # def fibonacci(n):
 #     if n == 0:
 #         return 0
@@ -9,6 +9,9 @@
 #     res = fibonacci(n-1) + fibonacci(n-2)
 #     return res
 
+# This is the original code of the lesson, since it is originally
+# a lesson to understand two-branching recursion
+
 # Time complexity: O(2^n)
 # Space complexity: O(n)
 def fibonacci(n):
@@ -18,6 +21,10 @@ def fibonacci(n):
     res = fibonacci(n-1) + fibonacci(n-2)
     return res
 
+# This is a loop based solution, which is more efficient.
+
+# Time complexity: O(n)
+# Space complexity: O(1)
 def fibonacci_loop(n):
     prev = 0
     curr = 1
