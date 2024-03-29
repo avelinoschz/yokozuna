@@ -32,6 +32,8 @@
 # Output:
 # [null, null, null, null, [1, 2, 3, 4], null, [2, 3, 4]]
 
+# -----------------------------------------------
+
 # Binary Search Tree Node
 from typing import List
 
