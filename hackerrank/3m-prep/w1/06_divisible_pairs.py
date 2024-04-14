@@ -71,21 +71,13 @@ def divisibleSumPairs2(n, k, ar):
     count = 0
 
     for num in ar:
-        print("num:", num)
         remainder = num % k
         complement = (k - remainder) % k
-        print("remainder:", remainder)
-        print("complement:", complement)
 
-        print("count before", count)
         if complement in remainders_freq:
             count += remainders_freq[complement]
-        print("count after", count)
-        print("---------")
 
         remainders_freq[remainder] = remainders_freq.get(remainder, 0) + 1
-
-    print(remainders_freq)
 
     return count
 
