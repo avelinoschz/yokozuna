@@ -37,15 +37,30 @@ import java.util.Scanner;
 public class Solution {
 
     public static void main(String[] args) {
+            int firstColumnDefaultLen = 15;
             Scanner sc=new Scanner(System.in);
             System.out.println("================================");
             for(int i=0;i<3;i++){
                 String s1=sc.next();
+                // this way only works for Java +11
+                // String spaces = " ".repeat(5); // This will create a string with 5 blank spaces
+                StringBuilder spacesBuilder = new StringBuilder();
+                int numSpaces = firstColumnDefaultLen - s1.length();
+                for (int j = 1; j <= numSpaces; j++){
+                    spacesBuilder.append(" ");
+                }
+                System.out.print(s1 + spacesBuilder.toString());
+                
                 int x=sc.nextInt();
-                //Complete this line
+                String xs = "";
+                if ((x > 9) && (x < 100)) {
+                    xs = "0";
+                }
+                else if ((x >= 0) && (x < 10)) {
+                    xs = "00";
+                }
+                System.out.println(xs + String.valueOf(x));
             }
             System.out.println("================================");
-
     }
 }
-
