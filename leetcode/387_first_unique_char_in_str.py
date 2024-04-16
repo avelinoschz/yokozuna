@@ -2,7 +2,6 @@
 
 # https://leetcode.com/problems/first-unique-character-in-a-string/
 
-# Company: Zillow
 # Easy
 
 # Given a string `s``, find the first non-repeating character in it and 
