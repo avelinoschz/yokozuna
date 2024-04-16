@@ -2,6 +2,8 @@
 
 # https://www.algoexpert.io/questions/reverse-linked-list
 
+# Hard
+
 # Write a function that takes in the head of a Singly Linked List, reverses 
 # the list in place (i.e., doesn't create a brand new list), and returns its 
 # new head.
