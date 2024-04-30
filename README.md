@@ -3,7 +3,7 @@
 Monorepo to collect progress on learning algorithms and data structures;
 and solving challenges from multiple platforms.
 
-The name of the repo serves as an inspiration and motivation to be better
+The name of the repo serves as an inspiration/motivation to be better
 and strive for greatness.
 
 ## Road to yokozuna
