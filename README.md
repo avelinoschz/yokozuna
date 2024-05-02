@@ -3,12 +3,12 @@
 Monorepo to collect progress on learning algorithms and data structures;
 and solving challenges from multiple platforms.
 
-The name of the repo serves as an inspiration/motivation always strive for greatness.
-
-## Road to yokozuna
+## #RoadToYokozuna
 
 > From Japanese 横綱よこづな (yokozuna, “wide rope”), the symbol of their rank worn
 about the waist.
+
+***Yokozuna*** is the highest rank in sumo.
 
 <p align="center">
     <img
@@ -16,7 +16,6 @@ about the waist.
     src="readme.assets/ushio_hinomaru_hinomaru_zumou_drawn_by_kyunta.jpg" width="300">
 </p>
 
-***Yokozuna*** is the highest rank in sumo.
 
 To date just 72 men have attained the status since it was first created in the
 late 1700s.
