@@ -15,29 +15,17 @@
 # not equal to val. The remaining elements of nums are not important as well as the size of nums.
 # Return k.
 def removeElement(nums, val):
-    """
-    :type nums: List[int]
-    :type val: int
-    :rtype: int
-    """
-    if not nums:
-        return 0
+    l = 0
+    for r in range(0, len(nums)):
+        if nums[r] != val:
+            nums[l] = nums[r]
+            l += 1
 
-    write_index = 0
-    for i in range(0, len(nums)):
-        if nums[i] != val:
-            if write_index != i:
-                nums[write_index] = nums[i]
-            write_index += 1
-    return write_index
+    return l
         
-# nums = [3,2,2,3] 
-# val = 3
-# expected_nums = [2,2]
-# expected_k = 2
-
 nums = [0,1,2,2,3,0,4,2]
 val = 2
+
 expected_nums = [0,1,3,0,4]
 expected_k = 5
 
