@@ -16,7 +16,6 @@ about the waist.
     src="readme.assets/ushio_hinomaru_hinomaru_zumou_drawn_by_kyunta.jpg" width="300">
 </p>
 
-
 To date just 72 men have attained the status since it was first created in the
 late 1700s.
 Yokozuna can never be demoted. They are seen as the living embodiment of sumo, and
