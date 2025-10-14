@@ -19,22 +19,23 @@
 # important as well as the size of nums.
 # Return k.
 def removeDuplicates(nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         if not nums:
             return 0
 
-        write_index = 1
-        for i in range(1, len(nums)):
-            if nums[i] != nums[i-1]:
-                if write_index != i:
-                    nums[write_index] = nums[i]
-                write_index += 1
-        return write_index
+        if len(nums) == 0:
+            return 0
+        
+        if len(nums) == 1:
+            return 1
+        
+        l = 1
+        for r in range(1, len(nums)):
+            if nums[r] != nums[r-1]:
+                nums[l] = nums[r]
+                l += 1
 
-# nums = [1,2]
+        return l
+
 nums = [0,0,1,1,1,2,2,3,3,4]
 expected_nums = [0,1,2,3,4]
 expected_k = 5
