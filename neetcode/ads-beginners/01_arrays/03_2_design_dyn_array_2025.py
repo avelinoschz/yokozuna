@@ -15,6 +15,7 @@
 # If we call void pushback(int n) but the array is full, we should resize the array first.
 
 # Example 1:
+
 # Input:
 # ["Array", 1, "getSize", "getCapacity"]
 
@@ -22,6 +23,7 @@
 # [null, 0, 1]
 
 # Example 2:
+
 # Input:
 # ["Array", 1, "pushback", 1, "getCapacity", "pushback", 2, "getCapacity"]
 
@@ -29,72 +31,70 @@
 # [null, null, 1, null, 2]
 
 # Example 3:
+
 # Input:
 # ["Array", 1, "getSize", "getCapacity", "pushback", 1, "getSize", "getCapacity", "pushback", 2, "getSize", "getCapacity", "get", 1, "set", 1, 3, "get", 1, "popback", "getSize", "getCapacity"]
 
 # Output:
 # [null, 0, 1, null, 1, 1, null, 2, 2, 2, null, 3, 3, 1, 2]
+# Note:
 
-# Note: The index i provided to get(int i) and set(int i) is guranteed to be greater than or equal to 0 and less than the number of elements in the array.
+# The index i provided to get(int i) and set(int i) is guaranteed to be greater than or equal to 0 and less than the number of elements in the array.
 
-# -----------------------------------------------
-
-# Dynamic Array implementation
-# Note: Python lists are dynamic arrays by default,
-# but this is an example of what's going on under the hood.
 class DynamicArray:
-    # O(n)
-    # n = capacity
+
     def __init__(self, capacity: int):
         self.capacity = capacity
-        self.length = 0
-        self.arr = [0] * self.capacity
+        self.size = 0
+        self.arr = [0] * capacity
 
-    # O(1)
-    # Get value at i-th index
     def get(self, i: int) -> int:
         return self.arr[i]
 
-    # O(1)
-    # Set n at i-th index
     def set(self, i: int, n: int) -> None:
         self.arr[i] = n
 
-    # Worst case: O(n)
-    # Amortized: O(1)
-    # Insert n in the last position of the array
     def pushback(self, n: int) -> None:
-        if self.length == self.capacity:
+        if self.size == self.capacity:
+            print("resizing")
             self.resize()
-            
-        # insert at next empty position
-        self.arr[self.length] = n
-        self.length += 1
 
-    # O(1)
-    # Remove the last element in the array
+        self.arr[self.size] = n
+        self.size += 1
+
     def popback(self) -> int:
-        if self.length > 0:
-            # soft delete the last element
-            self.length -= 1
-        # return the popped element
-        return self.arr[self.length]
+        last = self.size - 1 
+        val = self.arr[last]
+        self.size -= 1
+        return val
 
-    # O(n)
     def resize(self) -> None:
-        # Create new array of double capacity
-        self.capacity = 2 * self.capacity
-        new_arr = [0] * self.capacity 
-        
-        # Copy elements to new_arr
-        for i in range(self.length):
-            new_arr[i] = self.arr[i]
-        self.arr = new_arr
+        self.arr = self.arr + [0] * self.capacity
+        self.capacity *= 2
 
-    # O(1)
     def getSize(self) -> int:
-        return self.length
-    
-    # O(1)
+        return self.size
+        
     def getCapacity(self) -> int:
         return self.capacity
+
+    def printArr(self) -> None:
+        for val in self.arr:
+            print(val)
+
+dynarr = DynamicArray(5)
+
+print("printing initial array")
+dynarr.printArr()
+print(f"size: {dynarr.getSize()}")
+print(f"capacity: {dynarr.getCapacity()}")
+
+dynarr.pushback(100)
+dynarr.pushback(99)
+dynarr.pushback(98)
+dynarr.pushback(97)
+dynarr.pushback(96)
+dynarr.pushback(95)
+
+print("printing array after pushback")
+dynarr.printArr()

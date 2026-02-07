@@ -1,0 +1,1 @@
+# This lesson doesn't implement any code. This was a lesson about RAM in the arrays module.

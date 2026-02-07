@@ -53,6 +53,6 @@ insertMiddle(myArray, 2, 10, 3)
 printArr(myArray, 5)
 
 print("Removing from index 2:")
-removeMiddle(myArray, 0, 4)
+removeMiddle(myArray, 2, 4)
 printArr(myArray, 5)
 

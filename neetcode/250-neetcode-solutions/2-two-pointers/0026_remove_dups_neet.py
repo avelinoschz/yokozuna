@@ -1,6 +1,8 @@
 # 26. Remove Duplicates from Sorted Array
 
-# neetcode video solution
+# Topic: Two Pointers
+
+# Neetcode video solution
 # https://www.youtube.com/watch?v=DEJAZBq0FDA
 
 # Time complexity: O(n)

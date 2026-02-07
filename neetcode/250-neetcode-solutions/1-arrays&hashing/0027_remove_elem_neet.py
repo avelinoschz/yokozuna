@@ -1,6 +1,8 @@
 # 27. Remove Element
 
-# neetcode video solution
+# Topic: Arrays & Hashing
+
+# Neetcode video solution
 # https://www.youtube.com/watch?v=Pcd1ii9P9ZI
 
 # Easy
