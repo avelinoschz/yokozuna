@@ -5,10 +5,10 @@
 # Neetcode video solution
 # https://www.youtube.com/watch?v=DEJAZBq0FDA
 
+# Difficulty: Easy
+
 # Time complexity: O(n)
 # Space complexity: O(1)
-
-# Easy
 
 # You are given an integer array nums sorted in non-decreasing order. Your task is to remove duplicates from nums in-place so that each element appears only once.
 
