@@ -4,37 +4,43 @@
 
 # Easy
 
-# Given an integer array nums sorted in non-decreasing order, 
-# remove the duplicates in-place such that each unique element 
-# appears only once. The relative order of the elements should 
-# be kept the same. Then return the number of unique elements 
-# in nums.
+# Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
 
-# Consider the number of unique elements of nums to be k, to 
-# get accepted, you need to do the following things:
+# Consider the number of unique elements in nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements k.
 
-# Change the array nums such that the first k elements of nums 
-# contain the unique elements in the order they were present 
-# in nums initially. The remaining elements of nums are not 
-# important as well as the size of nums.
-# Return k.
+# The first k elements of nums should contain the unique numbers in sorted order. The remaining elements beyond index k - 1 can be ignored.
+
+# Example 1:
+# Input: nums = [1,1,2]
+# Output: 2, nums = [1,2,_]
+# Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+# It does not matter what you leave beyond the returned k (hence they are underscores).
+
+# Example 2:
+# Input: nums = [0,0,1,1,1,2,2,3,3,4]
+# Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+# Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+# It does not matter what you leave beyond the returned k (hence they are underscores).
+ 
+# Time complexity: O(n)
+# Space complexity: O(1)
 def removeDuplicates(nums):
-        if not nums:
-            return 0
+    if not nums:
+        return 0
 
-        if len(nums) == 0:
-            return 0
-        
-        if len(nums) == 1:
-            return 1
-        
-        l = 1
-        for r in range(1, len(nums)):
-            if nums[r] != nums[r-1]:
-                nums[l] = nums[r]
-                l += 1
+    if len(nums) == 0:
+        return 0
+    
+    if len(nums) == 1:
+        return 1
+    
+    l = 1
+    for r in range(1, len(nums)):
+        if nums[r] != nums[r-1]:
+            nums[l] = nums[r]
+            l += 1
 
-        return l
+    return l
 
 nums = [0,0,1,1,1,2,2,3,3,4]
 expected_nums = [0,1,2,3,4]
@@ -49,3 +55,17 @@ print("truncated", nums[:k])
 # need to be unique
 print(expected_nums == nums[:k])
 print(expected_k == k)
+
+# --------------------------------------------------
+# Solution: March 11, 2024
+# def removeDuplicates(self, nums):
+#     if not nums:
+#         return 0
+
+#     write_index = 1
+#     for i in range(1, len(nums)):
+#         if nums[i] != nums[i-1]:
+#             if write_index != i:
+#                 nums[write_index] = nums[i]
+#             write_index += 1
+#     return write_index
