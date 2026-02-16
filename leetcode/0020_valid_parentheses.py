@@ -2,7 +2,7 @@
 
 # https://leetcode.com/problems/valid-parentheses/
 
-# Easy
+# Difficulty: Easy
 
 # Given a string s containing just the characters 
 # '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -26,85 +26,12 @@
 # Input: s = "(]"
 # Output: false
 
-# This solves a simple case were all parentheses are always together
-# Like ()[](). But needs some changes if they could be nested.
-# def isValid(s):
-#     """
-#     :type s: str
-#     :rtype: bool
-#     """
-#     for i in range(0, len(s), 2):
-#         if s[i] == "(" and s[i+1] == ")":
-#             continue
+# Time complexity: O(n)
+# Space complexity: O(n)
 
-#         elif s[i] == "[" and s[i+1] == "]":
-#             continue
-
-#         elif s[i] == "{" and s[i+1] == "}":
-#             continue
-
-#         else:
-#             return False
-
-#     return True
-
-
-# This is the second iteration of the problem, considering nested parentheses
-# def isValid(s):
-#     """
-#     :type s: str
-#     :rtype: bool
-#     """
-#     if len(s) <= 1:
-#         return False
-
-#     if len(s)%2 != 0:
-#         return False
-
-#     stack = []
-#     for i in range(0, len(s)):
-#         if len(stack) > 1 and i == len(s)-1:
-#             return False
-
-#         if s[i] == '(' or s[i] == '[' or s[i] == '{':
-#             if i == len(s)-1:
-#                 return False
-#             stack.append(s[i])
-
-#         elif s[i] == ')':
-#             if len(stack) == 0:
-#                 return False
-#             pop = stack.pop()
-#             if pop != '(':
-#                 return False
-
-#         elif s[i] == ']':
-#             if len(stack) == 0:
-#                 return False
-#             pop = stack.pop()
-#             if pop != '[':
-#                 return False
-
-#         elif s[i] == '}':
-#             if len(stack) == 0:
-#                 return False
-#             pop = stack.pop()
-#             if pop != '{':
-#                 return False
-
-#         else:
-#             return False
-
-
-#     return True
-
-# Last iteration after looking at better solutions
+# Last iteration after looking at better solutions. First solutions are at the bottom.
 # This covers all cases with a more simple solution
 def isValid(s):
-    """
-    :type s: str
-    :rtype: bool
-    """
     stack = []
     pairs = {
         '(': ')',
@@ -117,7 +44,7 @@ def isValid(s):
         if bracket in pairs:
             stack.append(bracket)
         
-        # if len is 0, means we found first a closing bracket: invalid
+        # if len is 0, means we found a closing bracket as first character: invalid
         # if the bracket is diff from the closing of the popped one: invalid
         elif len(stack) == 0 or bracket != pairs[stack.pop()]:
             return False
@@ -162,6 +89,66 @@ result = isValid(s)
 print(f"input: {s} | output: {result}")
 print("pass: ", result == False)
 
+# This solves a simple case were all parentheses are always together
+# Like ()[](). But needs some changes if they could be nested.
+# def isValid(s):
+#     for i in range(0, len(s), 2):
+#         if s[i] == "(" and s[i+1] == ")":
+#             continue
+
+#         elif s[i] == "[" and s[i+1] == "]":
+#             continue
+
+#         elif s[i] == "{" and s[i+1] == "}":
+#             continue
+
+#         else:
+#             return False
+
+#     return True
 
 
+# This is the second iteration of the problem, considering nested parentheses
+# def isValid(s):
+#     if len(s) <= 1:
+#         return False
 
+#     if len(s)%2 != 0:
+#         return False
+
+#     stack = []
+#     for i in range(0, len(s)):
+#         if len(stack) > 1 and i == len(s)-1:
+#             return False
+
+#         if s[i] == '(' or s[i] == '[' or s[i] == '{':
+#             if i == len(s)-1:
+#                 return False
+#             stack.append(s[i])
+
+#         elif s[i] == ')':
+#             if len(stack) == 0:
+#                 return False
+#             pop = stack.pop()
+#             if pop != '(':
+#                 return False
+
+#         elif s[i] == ']':
+#             if len(stack) == 0:
+#                 return False
+#             pop = stack.pop()
+#             if pop != '[':
+#                 return False
+
+#         elif s[i] == '}':
+#             if len(stack) == 0:
+#                 return False
+#             pop = stack.pop()
+#             if pop != '{':
+#                 return False
+
+#         else:
+#             return False
+
+
+#     return True
