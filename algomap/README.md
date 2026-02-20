@@ -5,3 +5,6 @@ contains all the lessons summaries.
 
 The [Playlist](https://www.youtube.com/playlist?list=PLKYEe2WisBTFEr6laH5bR2J19j7sl5O8R)
 includes all the algo lessons + leetcode problem solving.
+
+The Github [Repo](https://github.com/gahogg/Leetcode-Solutions/tree/main) to all
+Leetcode solutions.
