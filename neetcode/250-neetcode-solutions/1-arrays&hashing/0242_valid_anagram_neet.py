@@ -31,7 +31,6 @@
 # By sorting both strings, all characters will be arranged in a consistent order.
 # If the two sorted strings are identical, then every character and its count match, which means the strings are anagrams.
 
-# Time & Space Complexity
 # Time complexity: O(nlogn+mlogm)
 # Space complexity: O(n+m) depending on the sorting algorithm.
 # Where n is the length of string s and m is the length of string t.

@@ -30,7 +30,6 @@
 
 # This approach uses the call stack to naturally reverse the direction of the pointers.
 
-# Time & Space Complexity
 # Time complexity: O(n)
 # Space complexity: O(n)
 
@@ -67,7 +66,6 @@ class Solution:
 # By moving these pointers forward in each step, we gradually reverse the entire list.
 # When `curr` becomes `null`, the list is fully reversed, and `prev` points to the new head.
 
-# Time & Space Complexity
 # Time complexity: O(n)
 # Space complexity: O(1)
 

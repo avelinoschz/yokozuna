@@ -66,10 +66,9 @@ class Solution:
 # If it doesn't match (or the stack is empty), the string is invalid.
 # A valid string ends with an empty stack.
 
+# Original neetcode solution
 # Time complexity: O(n)
 # Space complexity: O(n)
-
-# Original neetcode solution
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []

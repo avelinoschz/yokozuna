@@ -39,7 +39,6 @@
 # 0 <= nums[i] <= 50
 # 0 <= val <= 100
 
-# Time & Space Complexity
 # Time complexity: O(n)
 # Space complexity: O(n)
 class Solution:
