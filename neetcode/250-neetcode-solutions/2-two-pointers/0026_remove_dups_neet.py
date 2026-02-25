@@ -1,10 +1,9 @@
 # 26. Remove Duplicates from Sorted Array
 
-# Topic: Two Pointers
-
 # Question: https://neetcode.io/problems/remove-duplicates-from-sorted-array/question
-
 # Neetcode video solution: https://www.youtube.com/watch?v=DEJAZBq0FDA
+
+# Topic: Two Pointers
 
 # Difficulty: Easy
 

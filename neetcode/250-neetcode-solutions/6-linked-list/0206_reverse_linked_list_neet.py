@@ -1,7 +1,9 @@
 # 206. Reverse Linked List
 
-# Neetcode video solution
-# https://www.youtube.com/watch?v=G0_I-ZF0S38
+# Question: https://neetcode.io/problems/reverse-a-linked-list/question
+# Neetcode video solution: https://www.youtube.com/watch?v=G0_I-ZF0S38
+
+# Topic: Linked List
 
 # Difficulty: Easy
 

@@ -1,10 +1,9 @@
 # 1929. Concatenation of Array
 
-# Topic: Arrays & Hashing
-
 # Question: https://neetcode.io/problems/concatenation-of-array/question
-
 # Neetcode video solution: https://www.youtube.com/watch?v=68isPRHgcFQ
+
+# Topic: Arrays & Hashing
 
 # Difficulty: Easy
 

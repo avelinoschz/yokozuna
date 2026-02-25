@@ -1,10 +1,9 @@
 # 155. Min Stack
 
-# Topic: Stack
-
 # Question: https://neetcode.io/problems/minimum-stack/question
-
 # Neetcode video solution: https://www.youtube.com/watch?v=qkLl7nAwDPo
+
+# Topic: Stack
 
 # Difficulty: Medium
 

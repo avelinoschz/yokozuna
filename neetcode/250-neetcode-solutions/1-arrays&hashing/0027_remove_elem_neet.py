@@ -1,10 +1,9 @@
 # 27. Remove Element
 
-# Topic: Arrays & Hashing
-
 # Question: https://neetcode.io/problems/remove-element/question
-
 # Neetcode video solution: https://www.youtube.com/watch?v=Pcd1ii9P9ZI
+
+# Topic: Arrays & Hashing
 
 # Difficulty: Easy
 

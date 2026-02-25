@@ -1,10 +1,9 @@
 # 242. Valid Anagram
 
-# Topic: Arrays & Hashing
-
 # Question: https://neetcode.io/problems/is-anagram/question
-
 # Neetcode video solution: https://www.youtube.com/watch?v=9UtInBqnCgA
+
+# Topic: Arrays & Hashing
 
 # Difficulty: Easy
 

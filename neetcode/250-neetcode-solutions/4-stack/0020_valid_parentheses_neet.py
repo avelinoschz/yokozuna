@@ -1,10 +1,9 @@
 # 20. Valid Parentheses
 
-# Topic: Stack
-
 # Question: https://neetcode.io/problems/validate-parentheses/question
-
 # Neetcode video solution: https://www.youtube.com/watch?v=WTzjTskDFMg
+
+# Topic: Stack
 
 # Difficulty: Easy
 
