@@ -2,13 +2,11 @@
 
 # Topic: Arrays & Hashing
 
-# Neetcode video solution
-# https://www.youtube.com/watch?v=Pcd1ii9P9ZI
+# Question: https://neetcode.io/problems/remove-element/question
+
+# Neetcode video solution: https://www.youtube.com/watch?v=Pcd1ii9P9ZI
 
 # Difficulty: Easy
-
-# Time complexity: O(n)
-# Space complexity: O(1)
 
 # You are given an integer array nums and an integer val. Your task is to remove all occurrences of val from nums in-place.
 
@@ -41,25 +39,16 @@
 # 0 <= nums[i] <= 50
 # 0 <= val <= 100
 
-def removeElement(nums, val):
-    k = 0
-    for i in range(len(nums)):
-        if nums[i] != val:
-            nums[k] = nums[i]
-            k += 1
-    return k
-
-nums = [0,1,2,2,3,0,4,2]
-val = 2
-
-expected_nums = [0,1,3,0,4]
-expected_k = 5
-
-print("original nums: ", nums)
-k = removeElement(nums, val)
-print("val to remove:", val)
-print("output nums:", nums)
-print("truncated", nums[:k])
-print("output k:", k)
-print("pass nums: ", expected_nums ==  nums[:k])
-print("pass k: ", expected_k == k)
+# Time & Space Complexity
+# Time complexity: O(n)
+# Space complexity: O(n)
+class Solution:
+    def removeElement(self, nums: list[int], val: int) -> int:
+        tmp = []
+        for num in nums:
+            if num == val:
+                continue
+            tmp.append(num)
+        for i in range(len(tmp)):
+            nums[i] = tmp[i]
+        return len(tmp)

@@ -1,7 +1,10 @@
 # 20. Valid Parentheses
 
-# Neetcode video solution
-# https://www.youtube.com/watch?v=WTzjTskDFMg
+# Topic: Stack
+
+# Question: https://neetcode.io/problems/validate-parentheses/question
+
+# Neetcode video solution: https://www.youtube.com/watch?v=WTzjTskDFMg
 
 # Difficulty: Easy
 
@@ -38,8 +41,37 @@
 # Time complexity: O(n)
 # Space complexity: O(n)
 
+# 1. Brute Force
+# The idea is simple:
+# valid parentheses must always appear in matching pairs like "()", "{}", or "[]".
+# So if the string is valid, we can repeatedly remove these matching pairs until nothing is left.
+# If, after removing all possible pairs, the string becomes empty, then the parentheses were properly matched.
+# Otherwise, some unmatched characters remain, meaning the string is invalid.
+
+# Time complexity: O(n^2)
+# Space complexity: O(n)
+class Solution:
+    def isValid(self, s: str) -> bool:
+        while '()' in s or '{}' in s or '[]' in s:
+            s = s.replace('()', '')
+            s = s.replace('{}', '')
+            s = s.replace('[]', '')
+        return s == ''
+
+# 2. Stack
+# Valid parentheses must follow a last-opened, first-closed order — just like stacking plates.
+# So we use a stack to track opening brackets.
+# Whenever we see a closing bracket, we simply check whether it matches the most recent opening bracket on top of the stack.
+# If it matches, we remove that opening bracket.
+# If it doesn't match (or the stack is empty), the string is invalid.
+# A valid string ends with an empty stack.
+
+# Time complexity: O(n)
+# Space complexity: O(n)
+
 # Original neetcode solution
-def isValid(self, s: str) -> bool:
+class Solution:
+    def isValid(self, s: str) -> bool:
         stack = []
         closeToOpen = { ")" : "(", "]" : "[", "}" : "{" }
 

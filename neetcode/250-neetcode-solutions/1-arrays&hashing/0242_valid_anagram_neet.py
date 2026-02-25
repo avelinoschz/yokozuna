@@ -2,8 +2,9 @@
 
 # Topic: Arrays & Hashing
 
-# Neetcode video solution
-# https://www.youtube.com/watch?v=9UtInBqnCgA
+# Question: https://neetcode.io/problems/is-anagram/question
+
+# Neetcode video solution: https://www.youtube.com/watch?v=9UtInBqnCgA
 
 # Difficulty: Easy
 

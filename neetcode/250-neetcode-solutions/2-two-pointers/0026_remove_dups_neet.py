@@ -2,8 +2,9 @@
 
 # Topic: Two Pointers
 
-# Neetcode video solution
-# https://www.youtube.com/watch?v=DEJAZBq0FDA
+# Question: https://neetcode.io/problems/remove-duplicates-from-sorted-array/question
+
+# Neetcode video solution: https://www.youtube.com/watch?v=DEJAZBq0FDA
 
 # Difficulty: Easy
 
@@ -41,19 +42,50 @@
 # -100 <= nums[i] <= 100
 # nums is sorted in non-decreasing order.
 
-def removeDuplicates(nums):
-    l = 1
-    for r in range(1, len(nums)):
-        if nums[r] != nums[r-1]:
+# 1. Sorted Array
+# A set automatically removes duplicates, and a sorted set maintains order. We insert all elements into a sorted set, then copy the unique elements back to the original array. 
+# This approach is simple but uses extra space and doesn't take advantage of the array already being sorted.
+
+# For Leetcode, this is not a valid solution, because it uses extra space and doesn't modify the input array in-place as required by the problem statement.
+
+# Time complexity: O(n log n)
+# Space complexity: O(n)
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        unique = sorted(set(nums))
+        nums[:len(unique)] = unique
+        return len(unique)
+
+
+# 2. Two Pointers - I
+# Since the array is sorted, duplicates are adjacent. We use two pointers: one (l) marks where to place the next unique element, and another (r) scans through the array. 
+# When r finds a new value (different from what's at l), we copy it to position l and advance both pointers. This modifies the array in-place.
+
+# Time complexity: O(n)
+# Space complexity: O(1)
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        n = len(nums)
+        l = r = 0
+        while r < n:
             nums[l] = nums[r]
+            while r < n and nums[r] == nums[l]:
+                r += 1
             l += 1
-    return l
+        return l
 
-nums = [0,0,1,1,1,2,2,3,3,4]
-expected_nums = [0,1,2,3,4]
-expected_k = 5
 
-k = removeDuplicates(nums)
-print("output nums:", nums)
-print("output k:", k)
-print("truncated", nums[:k])
+# 3. Two Pointers - II
+# A more elegant approach: we compare each element with its predecessor. Since duplicates are consecutive in a sorted array, an element is unique if it differs from the one before it. 
+# We maintain a write pointer that only advances when we find a new unique value.
+
+# Time complexity: O(n)
+# Space complexity: O(1)
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        l = 1
+        for r in range(1, len(nums)):
+            if nums[r] != nums[r - 1]:
+                nums[l] = nums[r]
+                l += 1
+        return l

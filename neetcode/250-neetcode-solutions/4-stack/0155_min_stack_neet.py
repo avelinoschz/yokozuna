@@ -1,7 +1,10 @@
 # 155. Min Stack
 
-# Neetcode video solution
-# https://www.youtube.com/watch?v=qkLl7nAwDPo
+# Topic: Stack
+
+# Question: https://neetcode.io/problems/minimum-stack/question
+
+# Neetcode video solution: https://www.youtube.com/watch?v=qkLl7nAwDPo
 
 # Difficulty: Medium
 
@@ -53,17 +56,3 @@ class MinStack:
     def getMin(self) -> int:
         return self.min_stack[-1]
     
-# Your MinStack object will be instantiated and called as such:
-min_stack = MinStack()
-min_stack.push(-2)
-min_stack.push(0)
-min_stack.push(-3)
-min = min_stack.getMin() # return -3
-print(min)
-min_stack.pop()
-top = min_stack.top() #return 0
-print(top)
-min = min_stack.getMin() # return -2
-print(min)
-print("stack:", min_stack.stack)
-print("min_stack:", min_stack.min_stack)
