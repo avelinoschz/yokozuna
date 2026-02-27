@@ -1,11 +1,11 @@
 # 21. Merge TWo Sorted Lists
 
-# Question: https://neetcode.io/problems/merge-two-sorted-linked-lists/question
-# Neetcode video solution: https://www.youtube.com/watch?v=XIdigk956u0
+# https://neetcode.io/problems/merge-two-sorted-linked-lists/question
+# https://www.youtube.com/watch?v=XIdigk956u0
 
-# Topic: Linked List
+# Linked Lists
 
-# Difficulty: Easy
+# Easy
 
 # You are given the heads of two sorted linked lists list1 and list2.
 

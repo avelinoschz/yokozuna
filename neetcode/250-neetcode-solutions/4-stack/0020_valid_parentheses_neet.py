@@ -1,11 +1,11 @@
 # 20. Valid Parentheses
 
-# Question: https://neetcode.io/problems/validate-parentheses/question
-# Neetcode video solution: https://www.youtube.com/watch?v=WTzjTskDFMg
+# https://neetcode.io/problems/validate-parentheses/question
+# https://www.youtube.com/watch?v=WTzjTskDFMg
 
-# Topic: Stack
+# Stacks
 
-# Difficulty: Easy
+# Easy
 
 # You are given a string s consisting of the following characters: '(', ')', '{', '}', '[' and ']'.
 

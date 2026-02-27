@@ -1,11 +1,11 @@
 # 242. Valid Anagram
 
-# Question: https://neetcode.io/problems/is-anagram/question
-# Neetcode video solution: https://www.youtube.com/watch?v=9UtInBqnCgA
+# https://neetcode.io/problems/is-anagram/question
+# https://www.youtube.com/watch?v=9UtInBqnCgA
 
-# Topic: Arrays & Hashing
+# Arrays & Hashing
 
-# Difficulty: Easy
+# Easy
 
 # Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
 

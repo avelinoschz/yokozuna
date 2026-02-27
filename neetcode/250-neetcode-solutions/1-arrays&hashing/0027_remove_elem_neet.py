@@ -1,11 +1,11 @@
 # 27. Remove Element
 
-# Question: https://neetcode.io/problems/remove-element/question
-# Neetcode video solution: https://www.youtube.com/watch?v=Pcd1ii9P9ZI
+# https://neetcode.io/problems/remove-element/question
+# https://www.youtube.com/watch?v=Pcd1ii9P9ZI
 
-# Topic: Arrays & Hashing
+# Arrays & Hashing
 
-# Difficulty: Easy
+# Easy
 
 # You are given an integer array nums and an integer val. Your task is to remove all occurrences of val from nums in-place.
 

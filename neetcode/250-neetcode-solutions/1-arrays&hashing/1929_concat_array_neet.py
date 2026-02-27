@@ -1,11 +1,11 @@
 # 1929. Concatenation of Array
 
-# Question: https://neetcode.io/problems/concatenation-of-array/question
-# Neetcode video solution: https://www.youtube.com/watch?v=68isPRHgcFQ
+# https://neetcode.io/problems/concatenation-of-array/question
+# https://www.youtube.com/watch?v=68isPRHgcFQ
 
-# Topic: Arrays & Hashing
+# Arrays & Hashing
 
-# Difficulty: Easy
+# Easy
 
 # Time complexity: O(n + 2) which is O(n)
 # Space complexity: O(n)
