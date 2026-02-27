@@ -20,15 +20,26 @@
 # Sample Output
 # true
 
-# This was the last solution after watching the solution video from AlgoExpert
+# These were the last solutions, after watching the solution video from AlgoExpert
+
 # O(n) time | O(1) space - where `n` is the length of the input array
-def isValidSubsequence_Algo(array, sequence):
+def isValidSubsequence_Algo1(array, sequence):
     arrIdx = 0
     seqIdx = 0
     while arrIdx < len(array) and seqIdx < len(sequence):
         if array[arrIdx] == sequence[seqIdx]:
             seqIdx += 1
         arrIdx += 1
+    return seqIdx == len(sequence)
+
+# O(n) time | O(1) space - where `n` is the length of the array
+def isValidSubsequence_Algo2(array, sequence):
+    seqIdx = 0
+    for value in array:
+        if seqIdx == len(sequence):
+            break
+        if sequence[seqIdx] == value:
+            seqIdx += 1
     return seqIdx == len(sequence)
 
 # -----------------------------------------------
@@ -79,6 +90,18 @@ def isValidSubsequence3(array, sequence):
 array = [5, 1, 22, 25, 6, -1, 8, 10]
 sequence = [1, 6, -1, 10]
 
-result = isValidSubsequence_Algo(array, sequence)
+# This was another try done on 2026. Using a variation using two pointers.
+def isValidSubsequence4(array, sequence):
+    p = 0
+    for n in array:
+        if sequence[p] == n:
+            p += 1
+
+        if p >= len(sequence):
+            return True
+
+    return False
+
+result = isValidSubsequence_Algo1(array, sequence)
 print("result:", result)
 print("expected:", True)
