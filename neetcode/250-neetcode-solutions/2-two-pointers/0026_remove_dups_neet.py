@@ -3,9 +3,9 @@
 # Question: https://neetcode.io/problems/remove-duplicates-from-sorted-array/question
 # Neetcode video solution: https://www.youtube.com/watch?v=DEJAZBq0FDA
 
-# Topic: Two Pointers
+# Two Pointers
 
-# Difficulty: Easy
+# Easy
 
 # Time complexity: O(n)
 # Space complexity: O(1)

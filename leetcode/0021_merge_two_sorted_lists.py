@@ -1,4 +1,4 @@
-# 21. Merge TWo Sorted Lists
+# 0021. Merge Two Sorted Lists
 
 # https://leetcode.com/problems/merge-two-sorted-lists/
 
@@ -67,6 +67,7 @@ class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 class Solution:
     def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
         if list1 == None:
@@ -87,9 +88,8 @@ class Solution:
 
         return head
 
-
 # ----------------------------------------------------------------------------------------------------
-# Above are all 2024 
+# Everything below is from 2024 
 
 # Definition for singly-linked list.
 class ListNode:

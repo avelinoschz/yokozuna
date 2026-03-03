@@ -1,11 +1,11 @@
 # 206. Reverse Linked List
 
-# Question: https://neetcode.io/problems/reverse-a-linked-list/question
-# Neetcode video solution: https://www.youtube.com/watch?v=G0_I-ZF0S38
+# https://neetcode.io/problems/reverse-a-linked-list/question
+# https://www.youtube.com/watch?v=G0_I-ZF0S38
 
-# Topic: Linked List
+# Linked List
 
-# Difficulty: Easy
+# Easy
 
 # Given the beginning of a singly linked list head, reverse the list, and return the new beginning of the list.
 

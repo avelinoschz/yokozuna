@@ -1,4 +1,4 @@
-# 21. Merge TWo Sorted Lists
+# 21. Merge Two Sorted Lists
 
 # https://neetcode.io/problems/merge-two-sorted-linked-lists/question
 # https://www.youtube.com/watch?v=XIdigk956u0

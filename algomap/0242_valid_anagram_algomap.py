@@ -1,13 +1,14 @@
-# 242. Valid Anagram
+# 0242. Valid Anagram
 
-# Explanation: https://algomap.io/problems/find-closest-number-to-zero
-# Video solution: https://www.youtube.com/watch?v=dLlKA5DQKYs&t=199s
+# https://algomap.io/problems/find-closest-number-to-zero
+# https://www.youtube.com/watch?v=dLlKA5DQKYs&t=199s
 
 # Detailed Explanation
 
 # Understanding the Problem: Valid Anagram
 
-# The “Valid Anagram” problem is a classic string question that asks whether two given strings, s and t, are anagrams of each other. Two strings are considered anagrams if they contain the exact same characters with the exact same frequencies, though possibly in a different order.
+# The “Valid Anagram” problem is a classic string question that asks whether two given strings, s and t, are anagrams of each other. 
+# Two strings are considered anagrams if they contain the exact same characters with the exact same frequencies, though possibly in a different order.
 
 # For example:
 
@@ -15,7 +16,8 @@
 # s = "rat", t = "car" → Output: false
 # Why This Problem Matters
 
-# Validating anagrams appears in problems involving string normalization, word frequency comparison, and even in applications like plagiarism detection or cryptography. It reinforces core concepts in character counting and hash-based comparison.
+# Validating anagrams appears in problems involving string normalization, word frequency comparison, and even in applications like plagiarism detection or cryptography. 
+# It reinforces core concepts in character counting and hash-based comparison.
 
 # Brute Force Approach: Compare Frequency Dictionaries
 
@@ -60,7 +62,8 @@
 # Whitespace or punctuation → consider problem constraints before handling
 # Conclusion
 
-# The “Valid Anagram” problem is simple but powerful. It demonstrates how to solve problems by counting frequency or sorting structures. Mastering both approaches sharpens your skills in working with strings and hash maps—critical tools in programming and algorithm design.
+# The “Valid Anagram” problem is simple but powerful. It demonstrates how to solve problems by counting frequency or sorting structures. 
+# Mastering both approaches sharpens your skills in working with strings and hash maps—critical tools in programming and algorithm design.
 
 from collections import Counter
 class Solution:
