@@ -34,6 +34,11 @@ from typing import List
 # Hash map and hash table
 # After looking at some solutions, and pythonic way to do stuff, I found out that we can use a frequency array as the key in a hash map, and the value is the list of anagrams. 
 # This is more efficient than sorting the string every time we want to find the anagrams, because sorting takes O(nlogn) time, while creating the frequency array takes O(n) time.
+
+# Time complexity: O(m*n)
+# Space complexity:
+# - O(m) extra space.
+# - O(m*n) space for the output list.
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         anagrams = defaultdict(list)

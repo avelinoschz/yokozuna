@@ -34,8 +34,8 @@
 # By using the sorted version of each string as a key, we can group all anagrams together.
 # Strings that share the same sorted form must be anagrams, so placing them in the same group is both natural and efficient.
 
-# Time complexity: O(m * nlogn)
-# Space complexity: O(m * n)
+# Time complexity: O(m*nlogn)
+# Space complexity: O(m*n)
 # Where m is the number of strings and n is the length of the longest string.
 from collections import defaultdict
 from typing import List
@@ -55,10 +55,10 @@ class Solution:
 # Two strings are anagrams if and only if their frequency arrays are identical.
 # By using this frequency array (converted to a tuple so it can be a dictionary key), we can group all strings that share the same character counts.
 
-# Time complexity: O(m * n)
+# Time complexity: O(m*n)
 # Space complexity:
 # - O(m) extra space.
-# - O(m * n) space for the output list.
+# - O(m*n) space for the output list.
 # Where m is the number of strings and n is the length of the longest string.
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
