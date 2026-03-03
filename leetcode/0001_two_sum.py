@@ -4,11 +4,9 @@
 
 # Easy
 
-# Given an array of integers nums and an integer target, return indices of 
-# the two numbers such that they add up to target.
+# Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-# You may assume that each input would have exactly one solution, and you 
-# may not use the same element twice.
+# You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 # You can return the answer in any order.
 
@@ -24,18 +22,26 @@
 # Example 3:
 # Input: nums = [3,3], target = 6
 # Output: [0,1]
+ 
+# Constraints:
+# 2 <= nums.length <= 104
+# -109 <= nums[i] <= 109
+# -109 <= target <= 109
+# Only one valid answer exists.
 
 # Time complexity: O(n)
 # Space complexity: O(n)
 from typing import List
 
 def twoSum(nums: List[int], target: int) -> List[int]:
-    coms = {}
+    seen = {}
     for i in range(len(nums)):
-        com = target - nums[i]
-        if com in coms:
-            return [i, coms[com]]
-        coms[nums[i]] = i
+        dif = target - nums[i]
+        if dif in seen:
+            return [seen[dif], i] 
+        seen[nums[i]] = i
+
+    return []
 
 nums = [2,7,11,15]
 target = 9
