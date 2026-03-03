@@ -40,7 +40,7 @@ from typing import List
 # Start with the first string as the initial prefix candidate. Then compare it with each subsequent string, shrinking the prefix to match only the common portion. 
 # After processing all strings, what remains is the longest common prefix. The prefix can only shrink or stay the same as we go through more strings.
 
-# Time complexity: O(n∗m)
+# Time complexity: O(n*m)
 # Space complexity: O(1)
 # Where n is the length of the shortest string and m is the number of strings.
 class Solution:
@@ -60,7 +60,7 @@ class Solution:
 # Instead of comparing entire strings horizontally, we can compare characters column by column across all strings. 
 # Check if all strings have the same character at position 0, then position 1, and so on. The moment we find a mismatch or reach the end of any string, we've found where the common prefix ends.
 
-# Time complexity: O(n∗m)
+# Time complexity: O(n*m)
 # Space complexity: O(1)
 # Where n is the length of the shortest string and m is the number of strings.
 class Solution:
@@ -76,7 +76,7 @@ class Solution:
 # When strings are sorted lexicographically, the first and last strings in the sorted order are the most different from each other. 
 # If these two extremes share a common prefix, then all strings in between must also share that same prefix. So we only need to compare the first and last strings after sorting.
 
-# Time complexity: O(n∗mlogm)
+# Time complexity: O(n*mlogm)
 # Space complexity: O(1) or O(m) depending on the sorting algorithm.
 # Where n is the length of the longest string and m is the number of strings.
 class Solution:
@@ -96,7 +96,7 @@ class Solution:
 # A Trie naturally represents all prefixes. We insert the shortest string into the trie, then query each other string against it. 
 # For each string, we walk down the trie as far as characters match, tracking how deep we get. The minimum depth reached across all strings is the length of the longest common prefix.
 
-# Time complexity: O(n∗m)
+# Time complexity: O(n*m)
 # Space complexity: O(n)
 # Where n is the length of the shortest string and m is the number of strings.
 class TrieNode:

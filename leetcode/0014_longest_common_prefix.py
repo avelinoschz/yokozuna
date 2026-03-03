@@ -27,8 +27,8 @@
 
 
 # First try before looking at the solution.
-# Time complexity: O(n * m) where n is the number of strings and m is the length of the longest common prefix
-# Time complexity: O(n) Another way to foremulate is where n is the sum of the lengths of all strings in the array.
+# Time complexity: O(n*m) where n is the number of strings and m is the length of the longest common prefix
+# Time complexity: O(n) Another way to formulate is where n is the sum of the lengths of all strings in the array.
 # Space complexity: O(1)
 
 from typing import List
