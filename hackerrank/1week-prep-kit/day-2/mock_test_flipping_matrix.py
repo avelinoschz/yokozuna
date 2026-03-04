@@ -1,3 +1,7 @@
+# 1 Week prep kit: Day 2
+
+# Mock Test: Flipping the Matrix
+
 # Sean invented a game involving a 2n x 2n matrix where each cell of the matrix contains an integer. He
 # can reverse any of its rows or columns any number of times. The goal of the game is to maximize the sum
 # of the elements in n x n the submatrix located in the upper-left quadrant of the matrix.

@@ -1,3 +1,7 @@
+# 1 Week prep kit: Day 4
+
+# Balanced Brackets
+
 # A bracket is considered to be any one of the following characters: (, ), {, }, [, or ].
 
 # Two brackets are considered to be a matched pair if the an opening bracket 

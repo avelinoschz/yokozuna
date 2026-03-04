@@ -1,3 +1,7 @@
+# 1 Week prep kit: Day 2
+
+# Lonely Integer
+
 # Given an array of integers, where all elements but one occur twice, find the unique element.
 
 # Example
