@@ -1,7 +1,9 @@
 # 0242. Valid Anagram
 
-# https://algomap.io/problems/find-closest-number-to-zero
-# https://www.youtube.com/watch?v=dLlKA5DQKYs&t=199s
+# https://algomap.io/problems/valid-anagram
+# https://www.youtube.com/watch?v=_cCTcPQik6A
+
+# Hash Maps & Sets
 
 # Detailed Explanation
 

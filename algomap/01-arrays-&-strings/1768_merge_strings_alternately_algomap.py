@@ -1,5 +1,10 @@
 # 1768. Merge Strings Alternately
 
+# https://algomap.io/problems/merge-strings-alternately
+# https://www.youtube.com/watch?v=qq-AqEPKsI8
+
+# Arrays & Strings
+
 # Detailed Explanation
 
 # Problem Overview

@@ -1,7 +1,9 @@
 # 2239. Find Closest Number to Zero
 
-# https://algomap.io/problems/valid-anagram/list
-# https://www.youtube.com/watch?v=_cCTcPQik6A
+# https://algomap.io/problems/find-closest-number-to-zero
+# https://www.youtube.com/watch?v=dLlKA5DQKYs
+
+# Arrays & Strings
 
 # Detailed Explanation
 
@@ -46,14 +48,13 @@
 # Sensor data normalization
 # Financial deviation analysis
 # Error minimization logic
+
 # Summary
 
 # The Find Closest Number to Zero in an Array problem is simple but conceptually rich. 
 # It reinforces the importance of precise control structures and teaches developers how to implement custom tie-breaking rules using clean logic. 
 # Due to its clarity and relevance, it remains a staple among introductory-level data structure and algorithm problems.
 
-# Time: O(n)
-# Space: O(1)
 from typing import List
  
 class Solution:
@@ -67,3 +68,7 @@ class Solution:
             return abs(closest)
         else:
             return closest
+        
+        # Time: O(n)
+        # Space: O(1)
+ 
