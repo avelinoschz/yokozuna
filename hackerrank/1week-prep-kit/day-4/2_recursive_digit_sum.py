@@ -4,45 +4,54 @@
 
 # We define super digit of an integer  using the following rules:
 # Given an integer, we need to find the super digit of the integer.
-# If  has only  digit, then its super digit is .
-# Otherwise, the super digit of  is equal to the super digit of the sum of the digits of .
-# For example, the super digit of  will be calculated as:
-# 	super_digit(9875)   	9+8+7+5 = 29 
+# - If `x` has only 1 digit, then its super digit is `x`.
+# - Otherwise, the super digit of `x` is equal to the super digit of the sum of the digits of `x`.
+
+# For example, the super digit of `9875` will be calculated as:
+# 	super_digit(9875)   9+8+7+5 = 29 
 # 	super_digit(29) 	2 + 9 = 11
 # 	super_digit(11)		1 + 1 = 2
 # 	super_digit(2)		= 2  
+
 # Example
+# n = '9875'
+# k = 4
 
-
-# The number  is created by concatenating the string   times so the initial .
+# The number `p` is created by concatenating the string `n` `k` times so the initial value is `p = 9875987598759875`.
 #     superDigit(p) = superDigit(9875987598759875)
 #                   9+8+7+5+9+8+7+5+9+8+7+5+9+8+7+5 = 116
 #     superDigit(p) = superDigit(116)
 #                   1+1+6 = 8
 #     superDigit(p) = superDigit(8)
-# All of the digits of  sum to . The digits of  sum to .   is only one digit, so it is the super digit.
+
+# All of the digits of `p` sum to `116`. The digits of `116` sum to `8`. `8` is only one digit, so it is the super digit.
+
 # Function Description
 # Complete the function superDigit in the editor below. It must return the calculated super digit as an integer.
 # superDigit has the following parameter(s):
-# string n: a string representation of an integer
-# int k: the times to concatenate  to make 
+# - string n: a string representation of an integer
+# - int k: the times to concatenate  to make 
+
 # Returns
 # int: the super digit of  repeated  times
+
 # Input Format
 # The first line contains two space separated integers,  and .
+
 # Constraints
-
-
-
+# 1 <= n <= 10^100000
+# 1 <= k <= 10^5
 
 def superDigit(n, k):
     if len(n) == 1:
         return n
-    
+
     sum = 0
     for num in n:
         sum += int(num)
-        
+    
+    # In this way we only calculate a pre-calulated sum of the digits of `n` once, 
+    # instead of concatenating and then calculating the sum of the digits of `p` which would be much larger and less efficient.
     super = superDigit(str(sum), 1) * k
 
     return superDigit(super, 1)
